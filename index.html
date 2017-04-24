@@ -259,8 +259,14 @@ for (i=0;i<10000;i++) node.innerText = value;
       </aside>
     </section>
 
+    <section data-transition="none">
+      <img src="assets/render-step8.png"/>
+      <aside class="notes">Można dodać <br/>
+      </aside>
+    </section>
+
     <section>
-      <div style="display: flex; align-items: stretch">
+      <div style="display: flex; align-items: stretch; width: 100%">
       <pre flex><code class="html" data-trim style="height: 65vh; max-height: 65vh">
         <div>
           <button>
@@ -272,6 +278,22 @@ for (i=0;i<10000;i++) node.innerText = value;
             <li>Peach</li>
           </ul>
         </div>
+        </code></pre>
+        <pre flex><code class="html" data-trim style="max-height: 65vh; height: 65vh">
+        &lt;App>
+          <div>
+            <button>
+              Change Value
+            </button>
+            &lt;List>
+              <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Peach</li>
+              </ul>
+            &lt;/List>
+          </div>
+        &lt;/App>
         </code></pre>
         <pre flex><code class="javascript" data-trim style="max-height: 65vh">
 
@@ -287,22 +309,26 @@ for (i=0;i<10000;i++) node.innerText = value;
               "Change Value"
             ),
             React.createElement(
-              "ul",
+              List,
               null,
               React.createElement(
-                "li",
+                "ul",
                 null,
-                "Apple"
-              ),
-              React.createElement(
-                "li",
-                null,
-                "Banana"
-              ),
-              React.createElement(
-                "li",
-                null,
-                "Peach"
+                React.createElement(
+                  "li",
+                  null,
+                  "Apple"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Banana"
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  "Peach"
+                )
               )
             )
           )
@@ -312,12 +338,6 @@ for (i=0;i<10000;i++) node.innerText = value;
       <aside class="notes">
         Virtual DOM nie przechwuje elementów takich jak DOM<br/>
         JSX jest tłumaczony do JSa<br/>
-      </aside>
-    </section>
-
-    <section data-transition="none">
-      <img src="assets/render-extra-component.png"/>
-      <aside class="notes">Można dodać komponent który nie zmieni DOM<br/>
       </aside>
     </section>
 
