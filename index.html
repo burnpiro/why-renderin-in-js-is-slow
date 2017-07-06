@@ -265,6 +265,18 @@ for (i=0;i<10000;i++) node.innerText = value;
       </aside>
     </section>
 
+    <section data-transition="none">
+      <img src="assets/render-step9.png"/>
+      <aside class="notes">Można dodać <br/>
+      </aside>
+    </section>
+
+    <section data-transition="none">
+      <img src="assets/render-step10.png"/>
+      <aside class="notes">Można dodać <br/>
+      </aside>
+    </section>
+
     <section>
       <div style="display: flex; align-items: stretch; width: 100%">
       <pre flex><code class="html" data-trim style="height: 65vh; max-height: 65vh">
@@ -414,6 +426,7 @@ for (i=0;i<10000;i++) node.innerText = value;
         </code></pre>
       <aside class="notes">
         Dzięki JSX moża zwracać jako element bo to jest element<br/>
+        Dzięki JSX moża zwracać jako element bo to jest element<br/>
       </aside>
     </section>
 
@@ -494,7 +507,7 @@ for (i=0;i<10000;i++) node.innerText = value;
       <h2 style="text-transform: none">shouldComponentUpdate()</h2>
       <pre><code class="javascript" data-trim contenteditable>
         shouldComponentUpdate(nextProps, nextState) {
-          return this.state.list === nextState.list
+          return this.state.list !== nextState.list
         }
 
         [...]
